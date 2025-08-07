@@ -28,11 +28,12 @@ export const Header: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Always allow mobile menu to open regardless of scroll
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   const closeMobileMenu = () => {
@@ -40,7 +41,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <HeaderContainer $isScrolled={isScrolled}>
+    <HeaderContainer $isScrolled={isScrolled || isMobileMenuOpen}>
       <HeaderContent>
         <Logo>
           <TrendingUp className="logo-icon" />
@@ -49,20 +50,35 @@ export const Header: React.FC = () => {
 
         <Navigation>
           <NavList>
-            {NAVIGATION_ITEMS.map((item) => (
-              <NavItem key={item.path}>
-                <Link
-                  to={item.path}
-                  className={location.pathname === item.path ? 'active' : ''}
-                >
-                  {item.label}
-                </Link>
-              </NavItem>
-            ))}
+            {NAVIGATION_ITEMS.map((item) => {
+              const isExternal = item.path.startsWith('http');
+              const isSpecial = item.label === 'Advertisers' || item.label === 'Publishers';
+              return (
+                <NavItem key={item.path}>
+                  {isExternal ? (
+                    <a
+                      href={item.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={isSpecial ? `special-nav-btn ${item.label.toLowerCase()}` : ''}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className={location.pathname === item.path ? 'active' : ''}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </NavItem>
+              );
+            })}
           </NavList>
-          <Button variant="primary" size="medium">
+          {/* <Button variant="primary" size="medium">
             Get Started
-          </Button>
+          </Button> */}
         </Navigation>
 
         <MobileMenuButton onClick={toggleMobileMenu}>
@@ -72,17 +88,33 @@ export const Header: React.FC = () => {
 
       <MobileMenu $isOpen={isMobileMenuOpen}>
         <MobileNavList>
-          {NAVIGATION_ITEMS.map((item) => (
-            <MobileNavItem key={item.path}>
-              <Link to={item.path} onClick={closeMobileMenu}>
-                {item.label}
-              </Link>
-            </MobileNavItem>
-          ))}
+          {NAVIGATION_ITEMS.map((item) => {
+            const isExternal = item.path.startsWith('http');
+            const isSpecial = item.label === 'Advertisers' || item.label === 'Publishers';
+            return (
+              <MobileNavItem key={item.path}>
+                {isExternal ? (
+                  <a
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={isSpecial ? `special-nav-btn ${item.label.toLowerCase()}` : ''}
+                    onClick={closeMobileMenu}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link to={item.path} onClick={closeMobileMenu}>
+                    {item.label}
+                  </Link>
+                )}
+              </MobileNavItem>
+            );
+          })}
         </MobileNavList>
-        <Button variant="primary" size="large" fullWidth>
+        {/* <Button variant="primary" size="large" fullWidth>
           Get Started
-        </Button>
+        </Button> */}
       </MobileMenu>
     </HeaderContainer>
   );
