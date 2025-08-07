@@ -3,9 +3,9 @@ import { Business, TrendingUp, Public, People, CheckCircle } from '@mui/icons-ma
 import { Layout, PageContainer } from '../../components/common/Layout';
 import { COMPANY_INFO } from '../../utils/constants';
 import { PUBLIC_IMAGES } from '../../utils/publicImages';
+import { AboutHero } from '../../components/about/Hero/AboutHero';
 import {
   AboutContainer,
-  AboutHero,
   AboutSection,
   SectionContent,
   TextContent,
@@ -20,15 +20,7 @@ export const About: React.FC = () => {
     <Layout>
       <AboutContainer>
         <PageContainer>
-          <AboutHero>
-            <h1>
-              About <span className="highlight">{COMPANY_INFO.name}</span>
-            </h1>
-            <p>
-              {COMPANY_INFO.description} with a network of {COMPANY_INFO.specialties.length}+ 
-              trusted affiliates delivering exceptional results worldwide.
-            </p>
-          </AboutHero>
+          <AboutHero />
         </PageContainer>
 
         <AboutSection>

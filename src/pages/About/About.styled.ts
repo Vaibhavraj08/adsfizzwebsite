@@ -3,45 +3,9 @@ import { theme } from '../../styles/theme';
 import { fadeIn, slideInLeft } from '../../styles/animations';
 
 export const AboutContainer = styled.div`
-  padding: ${theme.spacing['2xl']} 0;
+   padding: ${theme.spacing['2xl']} 0;
 `;
 
-export const AboutHero = styled.section`
-  text-align: center;
-  padding: ${theme.spacing['3xl']} 0;
-  background: linear-gradient(135deg, ${theme.colors.primary.main}10, ${theme.colors.accent.main}10);
-  animation: ${fadeIn} 0.8s ease-out;
-
-  h1 {
-    font-size: ${theme.typography.fontSize['4xl']};
-    font-weight: ${theme.typography.fontWeight.bold};
-    color: ${theme.colors.neutral.dark};
-    margin-bottom: ${theme.spacing.lg};
-
-    @media (min-width: ${theme.breakpoints.tablet}) {
-      font-size: ${theme.typography.fontSize['5xl']};
-    }
-
-    .highlight {
-      background: linear-gradient(135deg, ${theme.colors.primary.main}, ${theme.colors.accent.main});
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-  }
-
-  p {
-    font-size: ${theme.typography.fontSize.lg};
-    color: ${theme.colors.neutral.medium};
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: ${theme.typography.lineHeight.relaxed};
-
-    @media (min-width: ${theme.breakpoints.tablet}) {
-      font-size: ${theme.typography.fontSize.xl};
-    }
-  }
-`;
 
 export const AboutSection = styled.section`
   padding: ${theme.spacing['3xl']} 0;

@@ -14,7 +14,7 @@ export const MainContent = styled.main`
 
 export const PageContainer = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 ${theme.spacing.md};
 
