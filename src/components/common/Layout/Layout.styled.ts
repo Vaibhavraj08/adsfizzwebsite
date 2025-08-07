@@ -14,14 +14,9 @@ export const MainContent = styled.main`
 
 export const PageContainer = styled.div`
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 ${theme.spacing.md};
-
-  @media (max-width: 768px) {
-    max-width: 100vw;
-    padding: 0 0.5rem;
-  }
 
   @media (min-width: ${theme.breakpoints.tablet}) {
     padding: 0 ${theme.spacing.xl};

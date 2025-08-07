@@ -61,11 +61,6 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 ${theme.spacing.md};
 
-  @media (max-width: 768px) {
-    max-width: 100vw;
-    padding: 0 0.5rem;
-  }
-
   @media (min-width: ${theme.breakpoints.tablet}) {
     padding: 0 ${theme.spacing.xl};
   }
@@ -73,11 +68,6 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   padding: ${theme.spacing['3xl']} 0;
-
-  @media (max-width: 768px) {
-    width: 100vw;
-    padding: ${theme.spacing.lg} 0;
-  }
 
   @media (min-width: ${theme.breakpoints.tablet}) {
     padding: ${theme.spacing['4xl']} 0;
