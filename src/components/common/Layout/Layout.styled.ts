@@ -18,6 +18,11 @@ export const PageContainer = styled.div`
   margin: 0 auto;
   padding: 0 ${theme.spacing.md};
 
+  @media (max-width: 768px) {
+    max-width: 100vw;
+    padding: 0 0.5rem;
+  }
+
   @media (min-width: ${theme.breakpoints.tablet}) {
     padding: 0 ${theme.spacing.xl};
   }
