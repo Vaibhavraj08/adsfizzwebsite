@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, Close, TrendingUp } from '@mui/icons-material';
-import { Button } from '../Button';
 import { NAVIGATION_ITEMS, PATHS } from '../../../routes/paths';
-import { COMPANY_INFO } from '../../../utils/constants';
 import {PUBLIC_IMAGES} from '../../../utils/publicImages';
 import {
   HeaderContainer,
@@ -44,7 +42,7 @@ export const Header: React.FC = () => {
   return (
     <HeaderContainer $isScrolled={isScrolled || isMobileMenuOpen}>
       <HeaderContent>
-        <Logo>
+        <Logo as={Link} to={PATHS.HOME} style={{ cursor: 'pointer' }}>
           <img src={PUBLIC_IMAGES.logo} alt="Logo" style={{ height: 36, marginRight: 8 }} />
           {/* <span>{COMPANY_INFO.name}</span> */}
         </Logo>
