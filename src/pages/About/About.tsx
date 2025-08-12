@@ -73,14 +73,39 @@ export const About: React.FC = () => {
                   measurable results. Our comprehensive approach ensures maximum ROI 
                   across all digital channels.
                 </p>
-                <SpecialtiesList>
-                  {COMPANY_INFO.specialties.map((specialty, index) => (
-                    <li key={index}>
-                      <CheckCircle className="icon" />
-                      <span>{specialty}</span>
-                    </li>
-                  ))}
-                </SpecialtiesList>
+                {(() => {
+                  const [showAll, setShowAll] = React.useState(false);
+                  const specialtiesToShow = showAll ? COMPANY_INFO.specialties : COMPANY_INFO.specialties.slice(0, 4);
+                  return (
+                    <>
+                      <SpecialtiesList>
+                        {specialtiesToShow.map((specialty, index) => (
+                          <li key={index}>
+                            <CheckCircle className="icon" />
+                            <span>{specialty}</span>
+                          </li>
+                        ))}
+                      </SpecialtiesList>
+                      {!showAll && (
+                        <button
+                          style={{
+                            marginTop: '1rem',
+                            padding: '0.5rem 1.5rem',
+                            borderRadius: '999px',
+                            background: 'linear-gradient(90deg, #10b981, #3b82f6)',
+                            color: '#fff',
+                            border: 'none',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                          }}
+                          onClick={() => setShowAll(true)}
+                        >
+                          View More
+                        </button>
+                      )}
+                    </>
+                  );
+                })()}
               </TextContent>
             </SectionContent>
           </PageContainer>
