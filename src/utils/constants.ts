@@ -7,10 +7,36 @@ export const COMPANY_INFO: Company = {
   phone: '+91 7761006623',
   website: 'https://www.adsfizz.com/',
   industry: 'Advertising Services',
-  employees: '2-10',
+  employees: '10-50',
   headquarters: '10A, sector-28, Mg-road, Gurugram, Haryana, 122002',
   founded: '2025',
-  specialties: ['Performance Marketing', 'Programmatic', 'iGaming', 'Gaming']
+  specialties: [
+    'Performance Marketing',
+    'Programmatic',
+    'iGaming',
+    'Gaming',
+    'Mobile Marketing',
+    'Affiliate Management',
+    'Lead Generation',
+    'App Install Campaigns',
+    'Display Advertising',
+    'Native Advertising',
+    'Video Marketing',
+    'Email Marketing',
+    'Social Media Marketing',
+    'SEO',
+    'SEM',
+    'Content Marketing',
+    'Influencer Marketing',
+    'Retargeting',
+    'Conversion Optimization',
+    'Analytics & Reporting',
+    'Brand Awareness',
+    'Traffic Monetization',
+    'E-commerce Solutions',
+    'B2B Marketing',
+    'B2C Marketing'
+  ]
 };
 
 export const SERVICES: Service[] = [

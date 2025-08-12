@@ -25,7 +25,7 @@ export const About: React.FC = () => {
               About <span className="highlight">{COMPANY_INFO.name}</span>
             </h1>
             <p>
-              {COMPANY_INFO.description} with a network of {COMPANY_INFO.specialties.length}+ 
+              {COMPANY_INFO.description} with a network of 200+ 
               trusted affiliates delivering exceptional results worldwide.
             </p>
           </AboutHero>

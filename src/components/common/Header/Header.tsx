@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, Close, TrendingUp } from '@mui/icons-material';
+import { Menu, Close } from '@mui/icons-material';
 import { NAVIGATION_ITEMS, PATHS } from '../../../routes/paths';
 import {PUBLIC_IMAGES} from '../../../utils/publicImages';
 import {

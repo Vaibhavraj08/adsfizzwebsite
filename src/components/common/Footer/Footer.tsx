@@ -48,15 +48,15 @@ export const Footer: React.FC = () => {
               <span>{CONTACT_INFO.address}</span>
             </ContactInfo>
             <SocialLinks>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/adsfizz-digital-media-pvt-ltd/" aria-label="LinkedIn">
                 <LinkedIn />
               </a>
-              <a href="#" aria-label="Twitter">
+              {/* <a href="#" aria-label="Twitter">
                 <Twitter />
               </a>
               <a href="#" aria-label="Facebook">
                 <Facebook />
-              </a>
+              </a> */}
             </SocialLinks>
           </FooterSection>
 
