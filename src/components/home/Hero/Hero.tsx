@@ -114,15 +114,15 @@ export const Hero: React.FC = () => {
 
               {/* CTA Buttons */}
               <ButtonGroup>
-                <PrimaryButton>
+                <PrimaryButton as="a" href="https://adsfizzdigital.offer18.com/m" target="_blank" rel="noopener noreferrer">
                   Start Your Campaign
                   <ButtonIcon>
                     <ArrowRight className="w-5 h-5" />
                   </ButtonIcon>
                 </PrimaryButton>
-                <SecondaryButton>
+                {/* <SecondaryButton>
                   View Case Studies
-                </SecondaryButton>
+                </SecondaryButton> */}
               </ButtonGroup>
 
               {/* Trust Indicators */}

@@ -4,6 +4,7 @@ import { Menu, Close, TrendingUp } from '@mui/icons-material';
 import { Button } from '../Button';
 import { NAVIGATION_ITEMS, PATHS } from '../../../routes/paths';
 import { COMPANY_INFO } from '../../../utils/constants';
+import {PUBLIC_IMAGES} from '../../../utils/publicImages';
 import {
   HeaderContainer,
   HeaderContent,
@@ -44,8 +45,8 @@ export const Header: React.FC = () => {
     <HeaderContainer $isScrolled={isScrolled || isMobileMenuOpen}>
       <HeaderContent>
         <Logo>
-          <TrendingUp className="logo-icon" />
-          <span>{COMPANY_INFO.name}</span>
+          <img src={PUBLIC_IMAGES.logo} alt="Logo" style={{ height: 36, marginRight: 8 }} />
+          {/* <span>{COMPANY_INFO.name}</span> */}
         </Logo>
 
         <Navigation>

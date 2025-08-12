@@ -44,7 +44,7 @@ export const Services: React.FC = () => {
                   title={service.title}
                   description={service.description}
                   footer={
-                    <Button variant="primary" size="medium">
+                    <Button variant="primary" size="medium" as="a" href="https://adsfizzdigital.offer18.com/m" target="_blank" rel="noopener noreferrer">
                       Get Started
                     </Button>
                   }

@@ -51,9 +51,9 @@ export const Services: React.FC = () => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ServiceFeatures>
-                <Button variant="outline" size="medium">
+                {/* <Button variant="outline" size="medium">
                   Learn More
-                </Button>
+                </Button> */}
               </ServiceCard>
             );
           })}

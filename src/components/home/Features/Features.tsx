@@ -41,9 +41,9 @@ export const Features: React.FC = () => {
                 <span>Instant Campaign Optimization</span>
               </li>
             </FeatureList>
-            <Button variant="primary" size="medium" icon={<TrendingUp />}>
+            {/* <Button variant="primary" size="medium" icon={<TrendingUp />}>
               View Analytics
-            </Button>
+            </Button> */}
           </FeatureText>
           <FeatureVisual className="feature-visual">
             <img 
@@ -77,7 +77,7 @@ export const Features: React.FC = () => {
                 <span>Quality Score Monitoring</span>
               </li>
             </FeatureList>
-            <Button variant="secondary" size="medium" icon={<CheckCircle />}>
+            <Button variant="secondary" size="medium" icon={<CheckCircle />} as="a" href="https://adsfizzdigital.offer18.com/m" target="_blank" rel="noopener noreferrer">
               Join Network
             </Button>
           </FeatureText>

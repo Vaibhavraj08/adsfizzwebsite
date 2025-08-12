@@ -1,5 +1,5 @@
 export const PUBLIC_IMAGES = {
-  logo: 'http://adsfizz.com/wp-content/uploads/2025/07/sndskfjds-300x161.png',
+  logo: '/assets/logo/logo.png',
   hero: {
     main: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
     marketing: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',

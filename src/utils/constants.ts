@@ -8,7 +8,7 @@ export const COMPANY_INFO: Company = {
   website: 'https://www.adsfizz.com/',
   industry: 'Advertising Services',
   employees: '2-10',
-  headquarters: 'Gurugram, Haryana',
+  headquarters: '10A, sector-28, Mg-road, Gurugram, Haryana, 122002',
   founded: '2025',
   specialties: ['Performance Marketing', 'Programmatic', 'iGaming', 'Gaming']
 };
@@ -47,7 +47,7 @@ export const SERVICES: Service[] = [
 export const CONTACT_INFO: ContactInfo = {
   email: 'ops@adsfizz.com',
   phone: '+91 7761006623',
-  address: 'Gurugram, Haryana, India'
+  address: '10A, sector-28, Mg-road, Gurugram, Haryana, 122002'
 };
 
 export const AFFILIATE_COUNT = '200+';

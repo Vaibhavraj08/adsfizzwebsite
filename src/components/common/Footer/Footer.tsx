@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Email, Phone, LocationOn, LinkedIn, Twitter, Facebook } from '@mui/icons-material';
 import { COMPANY_INFO, CONTACT_INFO } from '../../../utils/constants';
 import { PATHS } from '../../../routes/paths';
+import { PUBLIC_IMAGES } from '../../../utils/publicImages';
 import {
   FooterContainer,
   FooterContent,
@@ -12,8 +13,9 @@ import {
   SocialLinks,
   FooterBottom,
   Copyright,
-  FooterLinks
+  FooterLinks,
 } from './Footer.styled';
+import { Logo } from '../Header/Header.styled';
 
 export const Footer: React.FC = () => {
   return (
@@ -21,7 +23,17 @@ export const Footer: React.FC = () => {
       <FooterContent>
         <FooterGrid>
           <FooterSection>
-            <h3>{COMPANY_INFO.name}</h3>
+            <Logo style={{
+              background: 'rgba(255, 255, 255, 0.92)',
+              backdropFilter: 'blur(8px)',
+              borderRadius: '12px',
+              padding: '8px 16px',
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}>
+              <img src={PUBLIC_IMAGES.logo} alt="Logo" style={{ height: 36, marginRight: 8 }} />
+              {/* <span>{COMPANY_INFO.name}</span> */}
+            </Logo>
             <p>{COMPANY_INFO.description}</p>
             <ContactInfo>
               <Email className="icon" />
