@@ -1,10 +1,12 @@
+
+
 export const PATHS = {
   HOME: '/',
   ABOUT: '/about',
   SERVICES: '/services',
   CONTACT: '/contact',
-  ADVERTISERS: '/Advertisers',
-  PUBLISHERS: 'https://adsfizzdigital.offer18.com/m/signup_self_aff?r=&am='
+  ADVERTISERS: '/advertisers', // use lowercase and match folder/file name
+  PUBLISHERS: '/publishers'    // use lowercase and match folder/file name
 } as const;
 
 export const NAVIGATION_ITEMS = [
@@ -14,5 +16,5 @@ export const NAVIGATION_ITEMS = [
   { label: 'Contact', path: PATHS.CONTACT },
   { label: 'Advertisers', path: PATHS.ADVERTISERS },
   { label: 'Publishers', path: PATHS.PUBLISHERS }
-  
 ];
+
