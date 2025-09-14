@@ -3,7 +3,7 @@ export const PATHS = {
   ABOUT: '/about',
   SERVICES: '/services',
   CONTACT: '/contact',
-  ADVERTISERS: 'https://adsfizzdigital.offer18.com/m/signup_self_adv?r=&am=',
+  ADVERTISERS: '/Advertisers',
   PUBLISHERS: 'https://adsfizzdigital.offer18.com/m/signup_self_aff?r=&am='
 } as const;
 
