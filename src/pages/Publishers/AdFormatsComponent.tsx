@@ -21,7 +21,7 @@ interface AdFormat {
   image: string;
   icon: React.ComponentType<any>;
   features: string[];
-  cpm: string;
+  // cpm: string;
 }
 
 const adFormats: AdFormat[] = [
@@ -34,7 +34,7 @@ const adFormats: AdFormat[] = [
     image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     icon: Monitor,
     features: ['Higher CPMs', 'Rich Media', 'Social Integration'],
-    cpm: '$2.50'
+    //cpm: '$2.50'
   },
   {
     id: 'push',
@@ -45,7 +45,7 @@ const adFormats: AdFormat[] = [
     image: 'https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     icon: Bell,
     features: ['No Opt-ins', 'Animated Templates', 'Direct Reach'],
-    cpm: '$1.80'
+    //cpm: '$1.80'
   },
   {
     id: 'native',
@@ -56,7 +56,7 @@ const adFormats: AdFormat[] = [
     image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     icon: FileText,
     features: ['AdBlock Resistant', '10x Higher CTR', '1B+ Daily Impressions'],
-    cpm: '$3.20'
+    //cpm: '$3.20'
   },
   {
     id: 'video',
@@ -67,7 +67,7 @@ const adFormats: AdFormat[] = [
     image: 'https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     icon: Play,
     features: ['VAST/VPAID', 'Video Hosting', 'High Impact'],
-    cpm: '$4.50'
+    //cpm: '$4.50'
   },
   {
     id: 'banner',
@@ -78,7 +78,7 @@ const adFormats: AdFormat[] = [
     image: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     icon: Image,
     features: ['18K Publishers', '800M Impressions', '100% Payouts'],
-    cpm: '$2.10'
+    //cpm: '$2.10'
   },
   {
     id: 'popunder',
@@ -89,7 +89,7 @@ const adFormats: AdFormat[] = [
     image: 'https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     icon: ExternalLink,
     features: ['100% Visible', 'Non-Intrusive', 'Perfect for Apps'],
-    cpm: '$1.95'
+    // cpm: '$1.95'
   }
 ];
 
@@ -166,7 +166,7 @@ export const AdFormatsComponent: React.FC = () => {
                     <span className="current-format">{currentFormat.shortTitle}</span>
                     <span className="format-counter">{currentIndex + 1} of {adFormats.length}</span>
                   </div>
-                  <div className="cpm-badge">{currentFormat.cpm} CPM</div>
+                  {/* <div className="cpm-badge">{currentFormat.cpm} CPM</div> */}
                 </div>
               </div>
               
@@ -264,12 +264,17 @@ export const AdFormatsComponent: React.FC = () => {
                 
                 {isMobile && (
                   <div className="mobile-actions">
-                    <button className="mobile-cta-button primary">
+                    <a
+                      className="mobile-cta-button primary"
+                      href="https://adsfizzdigital.offer18.com/m/signup_self_adv?r=&am="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Get Started
-                    </button>
-                    <button className="mobile-cta-button secondary">
+                    </a>
+                    {/* <button className="mobile-cta-button secondary">
                       Learn More
-                    </button>
+                    </button> */}
                   </div>
                 )}
               </div>
