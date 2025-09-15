@@ -217,7 +217,7 @@ export const Publishers: React.FC = () => {
               
               <ContentImageSection>
                 <ContentImage 
-                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                  src="/assets/image/service.png"
                   alt="How affiliate marketing works for publishers"
                 />
                 <ContentImageOverlay>

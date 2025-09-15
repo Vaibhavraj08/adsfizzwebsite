@@ -1,5 +1,7 @@
 export const PUBLIC_IMAGES = {
   logo: '/assets/logo/logo.png',
+  service:'/assets/images/service.png',
+  socialmedia:'/assets/images/socialmedia.png',
   hero: {
     main: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
     marketing: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
