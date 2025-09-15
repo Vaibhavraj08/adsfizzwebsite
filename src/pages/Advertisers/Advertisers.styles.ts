@@ -43,7 +43,7 @@ const shimmer = keyframes`
 export const HeroSection = styled.section`
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea80 0%, #764ba289 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,7 @@ export const HeroSection = styled.section`
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.54), rgba(118, 75, 162, 0.57));
     z-index: 2;
   }
   

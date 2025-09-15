@@ -71,6 +71,7 @@ import {
 import AdFormatsComponent from './AdFormatsComponent';
 
 export const Publishers: React.FC = () => {
+
   return (
     <Layout>
       <HeroSection>
@@ -80,6 +81,31 @@ export const Publishers: React.FC = () => {
             <HeroSubtitle>
               Monetize your traffic and maximize your revenue with our premium affiliate marketing platform
             </HeroSubtitle>
+            <Button
+              className="primary"
+              as="a"
+              href="https://adsfizzdigital.offer18.com/m/signup_self_adv?r=&am="
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                marginTop: 32,
+                fontSize: '1.15rem',
+                padding: '1.1rem 2.5rem',
+                fontWeight: 700,
+                borderRadius: 9999,
+                boxShadow: '0 8px 24px rgba(102, 126, 234, 0.18)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 12,
+                background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+                color: '#fff',
+                border: 'none',
+                transition: 'all 0.3s',
+              }}
+            >
+              Join Now
+              <ArrowRight size={22} style={{ marginLeft: 10 }} />
+            </Button>
           </div>
         </HeroContent>
       </HeroSection>
