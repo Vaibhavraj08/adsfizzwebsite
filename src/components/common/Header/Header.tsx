@@ -52,6 +52,7 @@ export const Header: React.FC = () => {
             {NAVIGATION_ITEMS.map((item) => {
               const isExternal = item.path.startsWith('http');
               const isSpecial = item.label === 'Advertisers' || item.label === 'Publishers';
+              const specialClass = isSpecial ? `special-nav-btn ${item.label.toLowerCase()}` : '';
               return (
                 <NavItem key={item.path}>
                   {isExternal ? (
@@ -59,14 +60,16 @@ export const Header: React.FC = () => {
                       href={item.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={isSpecial ? `special-nav-btn ${item.label.toLowerCase()}` : ''}
+                      className={specialClass}
                     >
                       {item.label}
                     </a>
                   ) : (
                     <Link
                       to={item.path}
-                      className={location.pathname === item.path ? 'active' : ''}
+                      className={
+                        [location.pathname === item.path ? 'active' : '', specialClass].filter(Boolean).join(' ')
+                      }
                     >
                       {item.label}
                     </Link>
@@ -90,6 +93,7 @@ export const Header: React.FC = () => {
           {NAVIGATION_ITEMS.map((item) => {
             const isExternal = item.path.startsWith('http');
             const isSpecial = item.label === 'Advertisers' || item.label === 'Publishers';
+            const specialClass = isSpecial ? `special-nav-btn ${item.label.toLowerCase()}` : '';
             return (
               <MobileNavItem key={item.path}>
                 {isExternal ? (
@@ -97,13 +101,17 @@ export const Header: React.FC = () => {
                     href={item.path}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={isSpecial ? `special-nav-btn ${item.label.toLowerCase()}` : ''}
+                    className={specialClass}
                     onClick={closeMobileMenu}
                   >
                     {item.label}
                   </a>
                 ) : (
-                  <Link to={item.path} onClick={closeMobileMenu}>
+                  <Link
+                    to={item.path}
+                    onClick={closeMobileMenu}
+                    className={specialClass}
+                  >
                     {item.label}
                   </Link>
                 )}

@@ -13,17 +13,17 @@ export const HeaderContainer = styled.header<HeaderProps>`
   right: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: ${theme.shadows.md};
   
-  ${props => props.$isScrolled 
-    ? css`
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: ${theme.shadows.md};
-      `
-    : css`
-        background: transparent;
-      `
-  }
+  ${props => !props.$isScrolled && css`
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  `}
 `;
 
 export const HeaderContent = styled.div`
