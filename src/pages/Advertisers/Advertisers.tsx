@@ -195,7 +195,7 @@ export const Advertisers: React.FC = () => {
               
               <ContentImageSection>
                 <ContentImage 
-                  src="/assets/image/service.png"
+                  src="/assets/image/socialmedia.png"
                   alt="How affiliate marketing works"
                 />
                 <ContentImageOverlay>
